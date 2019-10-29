@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice Exercise</title>
+	<!-- <script type="text/javascript" src="./main.js"></script> -->
+</head>
+<body>
+
+<label>Word:</label>
+<input type="text" id="name" placeholder="enter string">
+<p id="demo"></p>
+<button type="button" onclick="btnclick()">Click</button>
+<script type="text/javascript">
+	
+
+   //Q1. calculating occurence of character
+	function btnclick(){
+	let username = document.getElementById("name").value;
+	console.log('username -->',username);
+
+
+    console.log(username[0]);
+    console.log(username[username.length-1]);
+
+
+	let name = username.split();  //converting string into array
+	console.log(name);
+	let i = 0;
+	let result = "";
+
+	for ( i =0;i < name.length; i++){
+		
+	}
+	
+}
+
+
+// Q2. calculating min, max and median
+
+var numbers = [45,0,23,1,59,34,22,14];
+
+// calculating minimum
+numbers.sort(function(a, b){
+	return a-b }
+	);
+console.log("min number",numbers[0])
+
+
+// calculating maximum
+numbers.sort(function(a, b){
+	return b-a}
+	);
+console.log("max number",numbers[0]);
+
+
+// calculating median
+function median(numbers){
+	numbers.sort(function(a,b){
+  	return a-b;
+  });
+  var half = Math.floor(numbers.length / 2);  //returns to round of to nearest integer
+  
+  if (numbers.length % 2)
+  	return numbers[half];
+  else
+  	return (numbers[half - 1] + numbers[half]) / 2.0;
+}
+
+console.log(median([45,0,23,1,59,34,22,14]));
+
+
+// Q5.
+let arr1 = ["india","england", "south africa"];
+console.log('first array',arr1);
+
+let arr2 = ["australia", "new zeland", "india", "england"];
+console.log('second array',arr2);
+
+//adding concating two arrays
+let arr3 = arr1.concat(arr2);
+console.log('combination of two array',arr3);
+
+//union arrays having values of arr1 and arr2 without repitition
+let uniqueArray = arr3.filter(function(item, pos){
+  return arr3.indexOf(item)== pos; 
+});
+console.log('union of array',uniqueArray);
+
+//intersectin returns unique array elements from 2 array
+let intersectArray = arr1.filter(value => arr2.includes(value));
+console.log('intersection of array',intersectArray);
+
+
+
+
+//Regular expresssion;
+var tel = 9770869893;
+var myPhoneRegex = /^[0-9]\d{2}[0-9]\d{2}\d{4}$/;
+if (myPhoneRegex.test(tel)) {
+    console.log('correct phone number')
+    // alert("correct phone number")
+} else {
+    console.log('incorrect phone number');
+      // alert("incorrect phone number")
+}
+var name = "Indra";
+var myNameRegex = /^[a-zA-Z\s]+$/
+
+if (myNameRegex.test(name)) {
+    console.log('valid name')
+
+} else {
+    console.log('invalid name');
+}
+
+var email = "indra91@gmail.com";
+var myEmailRegex = /^[a-z0-9][a-z0-9-_\.]+@([a-z]|[a-z0-9]?[a-z0-9-]+[a-z0-9])\.[a-z0-9]{2,10}(?:\.[a-z]{2,10})?$/
+
+  if(myEmailRegex.test(email)){
+  	console.log('valid email');
+  } else {
+  	console.log('invalid email');
+  }
+  
+</script>
+</body>
+</html>
